@@ -2,14 +2,13 @@ import chalk from 'chalk';
 import figlet from 'figlet'
 import greet from './greet.js'
 
-figlet(greet("Johnson"), function(err, data) {
+figlet(greet("Xola"), function(err, data) {
     "use strict"
     if (err) {
         console.log('Something went wrong...');
         console.dir(err);
-        // return;
+        return;
     }
-    const styledMessage = chalk.bgMagenta.black(greet('Johnson'));
+    const styledMessage = chalk.bgMagenta.black(data);
     console.log(styledMessage)
-    console.log(data)
 });
